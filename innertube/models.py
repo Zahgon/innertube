@@ -17,7 +17,7 @@ class Error:
 
     @property
     def status(self) -> http.HTTPStatus:
-        return http.HTTPStatus(self.code)
+        pass
 
 
 @dataclasses.dataclass
@@ -31,12 +31,7 @@ class ClientContext:
     locale: Optional[Locale] = None
 
     def params(self) -> Dict[str, str]:
-        return utils.filter(
-            {
-                "key": self.api_key,
-                "alt": "json",
-            }
-        )
+        pass
 
     def context(self) -> Dict[str, str]:
         return utils.filter(
@@ -49,18 +44,7 @@ class ClientContext:
         )
 
     def headers(self) -> Dict[str, str]:
-        return utils.filter(
-            {
-                "X-Goog-Api-Format-Version": "1",
-                "X-YouTube-Client-Name": str(self.client_id),
-                "X-YouTube-Client-Version": self.client_version,
-                "User-Agent": self.user_agent,
-                "Referer": self.referer,
-                "Accept-Language": (
-                    self.locale.accept_language() if self.locale is not None else None
-                ),
-            }
-        )
+        pass
 
 
 @dataclasses.dataclass

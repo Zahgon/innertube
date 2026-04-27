@@ -20,12 +20,7 @@ class Location(Enum):
 
     @classmethod
     def from_code(cls, country_code: str, /) -> Optional["Location"]:
-        location: Location
-        for location in cls:
-            if location.country_code.lower() == country_code.lower():
-                return location
-
-        return None
+        pass
 
     ALGERIA = ("DZ", "Algeria")
     ARGENTINA = ("AR", "Argentina")
@@ -158,100 +153,95 @@ class Language(Enum):
 
     @classmethod
     def from_code(cls, language_code: str, /) -> Optional["Language"]:
-        language: Language
-        for language in cls:
-            if language.language_code.lower() == language_code.lower():
-                return language
-
-        return None
+        pass
 
     AFRIKAANS = ("af", "Afrikaans", "Afrikaans")
-    AZERBAIJANI = ("az", "Azerbaijani", "Azərbaycan")
+    AZERBAIJANI = ("az", "Azerbaijani", "AzÉ™rbaycan")
     INDONESIAN = ("id", "Indonesian", "Bahasa Indonesia")
     MALAY = ("ms", "Malay", "Bahasa Malaysia")
     BOSNIAN = ("bs", "Bosnian", "Bosanski")
-    CATALAN = ("ca", "Catalan", "Català")
-    CZECH = ("cs", "Czech", "Čeština")
+    CATALAN = ("ca", "Catalan", "CatalÃ ")
+    CZECH = ("cs", "Czech", "ÄŒeÅ¡tina")
     DANISH = ("da", "Danish", "Dansk")
     GERMAN = ("de", "German", "Deutsch")
     ESTONIAN = ("et", "Estonian", "Eesti")
     ENGLISH_INDIA = ("en-IN", "English (India)", "English (India)")
     ENGLISH_UK = ("en-GB", "English (UK)", "English (UK)")
     ENGLISH_US = ("en-US", "English (US)", "English (US)")
-    SPANISH_SPAIN = ("es", "Spanish (Spain)", "Español (España)")
+    SPANISH_SPAIN = ("es", "Spanish (Spain)", "EspaÃ±ol (EspaÃ±a)")
     SPANISH_LATIN_AMERICA = (
         "es-419",
         "Spanish (Latin America)",
-        "Español (Latinoamérica)",
+        "EspaÃ±ol (LatinoamÃ©rica)",
     )
-    SPANISH_US = ("es-US", "Spanish (US)", "Español (US)")
+    SPANISH_US = ("es-US", "Spanish (US)", "EspaÃ±ol (US)")
     BASQUE = ("eu", "Basque", "Euskara")
     FILIPINO = ("fil", "Filipino", "Filipino")
-    FRENCH = ("fr", "French", "Français")
-    FRENCH_CANADA = ("fr-CA", "French (Canada)", "Français (Canada)")
+    FRENCH = ("fr", "French", "FranÃ§ais")
+    FRENCH_CANADA = ("fr-CA", "French (Canada)", "FranÃ§ais (Canada)")
     GALICIAN = ("gl", "Galician", "Galego")
     CROATIAN = ("hr", "Croatian", "Hrvatski")
     ZULU = ("zu", "Zulu", "IsiZulu")
-    ICELANDIC = ("is", "Icelandic", "Íslenska")
+    ICELANDIC = ("is", "Icelandic", "Ã�slenska")
     ITALIAN = ("it", "Italian", "Italiano")
     KISWAHILI = ("sw", "Kiswahili", "Kiswahili")
-    LATVIAN = ("lv", "Latvian", "Latviešu valoda")
-    LITHUANIAN = ("lt", "Lithuanian", "Lietuvių")
+    LATVIAN = ("lv", "Latvian", "LatvieÅ¡u valoda")
+    LITHUANIAN = ("lt", "Lithuanian", "LietuviÅ³")
     HUNGARIAN = ("hu", "Hungarian", "Magyar")
     DUTCH = ("nl", "Dutch", "Nederlands")
     NORWEGIAN = ("no", "Norwegian", "Norsk")
-    UZBEK = ("uz", "Uzbek", "O‘zbek")
+    UZBEK = ("uz", "Uzbek", "Oâ€˜zbek")
     POLISH = ("pl", "Polish", "Polski")
-    PORTUGUESE = ("pt-PT", "Portuguese", "Português")
-    PORTUGUESE_BRASIL = ("pt", "Portuguese (Brasil)", "Português (Brasil)")
-    ROMANIAN = ("ro", "Romanian", "Română")
+    PORTUGUESE = ("pt-PT", "Portuguese", "PortuguÃªs")
+    PORTUGUESE_BRASIL = ("pt", "Portuguese (Brasil)", "PortuguÃªs (Brasil)")
+    ROMANIAN = ("ro", "Romanian", "RomÃ¢nÄƒ")
     ALBANIAN = ("sq", "Albanian", "Shqip")
-    SLOVAK = ("sk", "Slovak", "Slovenčina")
-    SLOVENIAN = ("sl", "Slovenian", "Slovenščina")
+    SLOVAK = ("sk", "Slovak", "SlovenÄ�ina")
+    SLOVENIAN = ("sl", "Slovenian", "SlovenÅ¡Ä�ina")
     SERBIAN = ("sr-Latn", "Serbian", "Srpski")
     FINNISH = ("fi", "Finnish", "Suomi")
     SWEDISH = ("sv", "Swedish", "Svenska")
-    VIETNAMESE = ("vi", "Vietnamese", "Tiếng Việt")
-    TURKISH = ("tr", "Turkish", "Türkçe")
-    BELARUSIAN = ("be", "Belarusian", "Беларуская")
-    BULGARIAN = ("bg", "Bulgarian", "Български")
-    KYRGYZ = ("ky", "Kyrgyz", "Кыргызча")
-    KAZAKH = ("kk", "Kazakh", "Қазақ Тілі")
-    MACEDONIAN = ("mk", "Macedonian", "Македонски")
-    MONGOLIAN = ("mn", "Mongolian", "Монгол")
-    RUSSIAN = ("ru", "Russian", "Русский")
-    SERBIAN_CYRILLIC = ("sr", "Serbian (Cyrillic)", "Српски")
-    UKRAINIAN = ("uk", "Ukrainian", "Українська")
-    GREEK = ("el", "Greek", "Ελληνικά")
-    ARMENIAN = ("hy", "Armenian", "Հայերեն")
-    HEBREW = ("he", "Hebrew", "עברית")
-    URDU = ("ur", "Urdu", "اردو")
-    ARABIC = ("ar", "Arabic", "العربية")
-    PERSIAN = ("fa", "Persian", "فارسی")
-    NEPALI = ("ne", "Nepali", "नेपाली")
-    MARATHI = ("mr", "Marathi", "मराठी")
-    HINDI = ("hi", "Hindi", "हिन्दी")
-    ASSAMESE = ("as", "Assamese", "অসমীয়া")
-    BENGALI = ("bn", "Bengali", "বাংলা")
-    PUNJABI = ("pa", "Punjabi", "ਪੰਜਾਬੀ")
-    GUJARATI = ("gu", "Gujarati", "ગુજરાતી")
-    ODIA = ("or", "Odia", "ଓଡ଼ିଆ")
-    TAMIL = ("ta", "Tamil", "தமிழ்")
-    TELUGU = ("te", "Telugu", "తెలుగు")
-    KANNADA = ("kn", "Kannada", "ಕನ್ನಡ")
-    MALAYALAM = ("ml", "Malayalam", "മലയാളം")
-    SINHALA = ("si", "Sinhala", "සිංහල")
-    THAI = ("th", "Thai", "ภาษาไทย")
-    LAO = ("lo", "Lao", "ລາວ")
-    BURMESE = ("my", "Burmese", "ဗမာ")
-    GEORGIAN = ("ka", "Georgian", "ქართული")
-    AMHARIC = ("am", "Amharic", "አማርኛ")
-    KHMER = ("km", "Khmer", "ខ្មែរ")
-    CHINESE_SIMPLIFIED = ("zh-CN", "Chinese (Simplified)", "中文 (简体)")
-    CHINESE_TRADITIONAL = ("zh-TW", "Chinese (Traditional)", "中文 (繁體)")
-    CHINESE_HONG_KONG = ("zh-HK", "Chinese (Hong Kong)", "中文 (香港)")
-    JAPANESE = ("ja", "Japanese", "日本語")
-    KOREAN = ("ko", "Korean", "한국어")
+    VIETNAMESE = ("vi", "Vietnamese", "Tiáº¿ng Viá»‡t")
+    TURKISH = ("tr", "Turkish", "TÃ¼rkÃ§e")
+    BELARUSIAN = ("be", "Belarusian", "Ð‘ÐµÐ»Ð°Ñ€ÑƒÑ�ÐºÐ°Ñ�")
+    BULGARIAN = ("bg", "Bulgarian", "Ð‘ÑŠÐ»Ð³Ð°Ñ€Ñ�ÐºÐ¸")
+    KYRGYZ = ("ky", "Kyrgyz", "ÐšÑ‹Ñ€Ð³Ñ‹Ð·Ñ‡Ð°")
+    KAZAKH = ("kk", "Kazakh", "ÒšÐ°Ð·Ð°Ò› Ð¢Ñ–Ð»Ñ–")
+    MACEDONIAN = ("mk", "Macedonian", "ÐœÐ°ÐºÐµÐ´Ð¾Ð½Ñ�ÐºÐ¸")
+    MONGOLIAN = ("mn", "Mongolian", "ÐœÐ¾Ð½Ð³Ð¾Ð»")
+    RUSSIAN = ("ru", "Russian", "Ð ÑƒÑ�Ñ�ÐºÐ¸Ð¹")
+    SERBIAN_CYRILLIC = ("sr", "Serbian (Cyrillic)", "Ð¡Ñ€Ð¿Ñ�ÐºÐ¸")
+    UKRAINIAN = ("uk", "Ukrainian", "Ð£ÐºÑ€Ð°Ñ—Ð½Ñ�ÑŒÐºÐ°")
+    GREEK = ("el", "Greek", "Î•Î»Î»Î·Î½Î¹ÎºÎ¬")
+    ARMENIAN = ("hy", "Armenian", "Õ€Õ¡ÕµÕ¥Ö€Õ¥Õ¶")
+    HEBREW = ("he", "Hebrew", "×¢×‘×¨×™×ª")
+    URDU = ("ur", "Urdu", "Ø§Ø±Ø¯Ùˆ")
+    ARABIC = ("ar", "Arabic", "Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©")
+    PERSIAN = ("fa", "Persian", "Ù�Ø§Ø±Ø³ÛŒ")
+    NEPALI = ("ne", "Nepali", "à¤¨à¥‡à¤ªà¤¾à¤²à¥€")
+    MARATHI = ("mr", "Marathi", "à¤®à¤°à¤¾à¤ à¥€")
+    HINDI = ("hi", "Hindi", "à¤¹à¤¿à¤¨à¥�à¤¦à¥€")
+    ASSAMESE = ("as", "Assamese", "à¦…à¦¸à¦®à§€à¦¯à¦¼à¦¾")
+    BENGALI = ("bn", "Bengali", "à¦¬à¦¾à¦‚à¦²à¦¾")
+    PUNJABI = ("pa", "Punjabi", "à¨ªà©°à¨œà¨¾à¨¬à©€")
+    GUJARATI = ("gu", "Gujarati", "àª—à«�àªœàª°àª¾àª¤à«€")
+    ODIA = ("or", "Odia", "à¬“à¬¡à¬¼à¬¿à¬†")
+    TAMIL = ("ta", "Tamil", "à®¤à®®à®¿à®´à¯�")
+    TELUGU = ("te", "Telugu", "à°¤à±†à°²à±�à°—à±�")
+    KANNADA = ("kn", "Kannada", "à²•à²¨à³�à²¨à²¡")
+    MALAYALAM = ("ml", "Malayalam", "à´®à´²à´¯à´¾à´³à´‚")
+    SINHALA = ("si", "Sinhala", "à·ƒà·’à¶‚à·„à¶½")
+    THAI = ("th", "Thai", "à¸ à¸²à¸©à¸²à¹„à¸—à¸¢")
+    LAO = ("lo", "Lao", "àº¥àº²àº§")
+    BURMESE = ("my", "Burmese", "á€—á€™á€¬")
+    GEORGIAN = ("ka", "Georgian", "áƒ¥áƒ�áƒ áƒ—áƒ£áƒšáƒ˜")
+    AMHARIC = ("am", "Amharic", "áŠ áˆ›áˆ­áŠ›")
+    KHMER = ("km", "Khmer", "áž�áŸ’áž˜áŸ‚ážš")
+    CHINESE_SIMPLIFIED = ("zh-CN", "Chinese (Simplified)", "ä¸­æ–‡ (ç®€ä½“)")
+    CHINESE_TRADITIONAL = ("zh-TW", "Chinese (Traditional)", "ä¸­æ–‡ (ç¹�é«”)")
+    CHINESE_HONG_KONG = ("zh-HK", "Chinese (Hong Kong)", "ä¸­æ–‡ (é¦™æ¸¯)")
+    JAPANESE = ("ja", "Japanese", "æ—¥æœ¬èªž")
+    KOREAN = ("ko", "Korean", "í•œêµ­ì–´")
 
 
 @dataclass
@@ -271,6 +261,4 @@ class Locale:
         self.location = location
 
     def accept_language(self) -> str:
-        return ",".join(
-            item for item in (self.language, self.location) if item is not None
-        )
+        pass

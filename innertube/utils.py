@@ -7,4 +7,4 @@ V = TypeVar("V")
 
 
 def filter(dictionary: Dict[K, Optional[V]], /) -> Dict[K, V]:
-    return {key: value for key, value in dictionary.items() if value is not None}
+    pass

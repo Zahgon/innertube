@@ -27,7 +27,7 @@ class Client:
     ) -> dict:
         @self.middleware.bind
         def process(data: dict, /) -> dict:
-            return data
+            pass
 
         response: dict = process(
             self.adaptor.dispatch(endpoint, params=params, body=body)
@@ -88,15 +88,10 @@ class InnerTube(Client):
         return self(Endpoint.CONFIG)
 
     def guide(self) -> dict:
-        return self(Endpoint.GUIDE)
+        pass
 
     def player(self, video_id: str) -> dict:
-        return self(
-            Endpoint.PLAYER,
-            body=dict(
-                videoId=video_id,
-            ),
-        )
+        pass
 
     def browse(
         self,
@@ -105,16 +100,7 @@ class InnerTube(Client):
         params: Optional[str] = None,
         continuation: Optional[str] = None,
     ) -> dict:
-        return self(
-            Endpoint.BROWSE,
-            body=utils.filter(
-                dict(
-                    browseId=browse_id,
-                    params=params,
-                    continuation=continuation,
-                )
-            ),
-        )
+        pass
 
     def search(
         self,
@@ -123,16 +109,7 @@ class InnerTube(Client):
         params: Optional[str] = None,
         continuation: Optional[str] = None,
     ) -> dict:
-        return self(
-            Endpoint.SEARCH,
-            body=utils.filter(
-                dict(
-                    query=query or "",
-                    params=params,
-                    continuation=continuation,
-                )
-            ),
-        )
+        pass
 
     def next(
         self,
@@ -143,42 +120,19 @@ class InnerTube(Client):
         index: Optional[int] = None,
         continuation: Optional[str] = None,
     ) -> dict:
-        return self(
-            Endpoint.NEXT,
-            body=utils.filter(
-                dict(
-                    params=params,
-                    playlistId=playlist_id,
-                    videoId=video_id,
-                    playlistIndex=index,
-                    continuation=continuation,
-                )
-            ),
-        )
+        pass
 
     def get_transcript(
         self,
         params: str,
     ) -> dict:
-        return self(
-            Endpoint.GET_TRANSCRIPT,
-            body=utils.filter(
-                dict(
-                    params=params,
-                )
-            ),
-        )
+        pass
 
     def music_get_search_suggestions(
         self,
         input: Optional[str] = None,
     ) -> dict:
-        return self(
-            Endpoint.MUSIC_GET_SEARCH_SUGGESTIONS,
-            body=dict(
-                input=input or "",
-            ),
-        )
+        pass
 
     def music_get_queue(
         self,
@@ -186,12 +140,4 @@ class InnerTube(Client):
         video_ids: Optional[List[str]] = None,
         playlist_id: Optional[str] = None,
     ) -> dict:
-        return self(
-            Endpoint.MUSIC_GET_QUEUE,
-            body=utils.filter(
-                dict(
-                    playlistId=playlist_id,
-                    videoIds=video_ids or (None,),
-                )
-            ),
-        )
+        pass
